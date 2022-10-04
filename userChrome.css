@@ -39,8 +39,8 @@ https://color.firefox.com/?theme=XQAAAAJUAQAAAAAAAABBqYhm849SCia48_6EGccwS-xMDPr
 #tabbrowser-arrowscrollbox-periphery {
 	height: 20px !important;
 	min-height: 20px !important;
-	padding-bottom: 2px !important;
-	padding-top: 3px !important;
+	padding-bottom: 1px !important;
+	padding-top: 1px !important;
 	border-radius: 6px;
 	border-width: 1px;
 }
