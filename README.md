@@ -24,3 +24,4 @@ Part 2: Installing the color theme
 * inspect outer border on toolbar when in windowed mode
 * sometimes the close button on hover of a tab is blocked by the underlying text of that tab
   * hover detection of the button is wrong if the tabs text is too long
+* change the border color for the search bar when there is text selected but it is not focused from blue to something else
