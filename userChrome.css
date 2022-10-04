@@ -1,0 +1,130 @@
+@namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
+
+/* Intended to be used with this color scheme: 
+
+https://color.firefox.com/?theme=XQAAAAJUAQAAAAAAAABBqYhm849SCia48_6EGccwS-xMDPr79BBH6_4EpD24jBgjl6kvKSCXh41NOn6Dx5fR2q-a75GjEsvqfeU3VCj6w31W5eXvnSPrqPMCrtBu4dvYAJ4HJEbQ5PR6LKabjxMeCqo8aMtZBZuZ1NU_n0yAIvmiUoNsngm5b2WcT5zFMVsiSkeHdE-YluAjB0nBaIxF6fJVIu-yMdBQQEeyMC93_Kkuhv69kKhxBArVpLCywAtf2Y2Sis2qAb_V_SLQHNU9LTSSxkUr1uBJ3_rmAi9_yUk7IL1DRBAriIn_5KplwA 
+
+*/
+
+/* ROOT - VARS */
+:root {
+	/* fix for full screen mode */
+	--tab-toolbar-navbar-overlap: 0px !important;
+	/* set minimum tab height  */
+	--tab-min-height: 15px !important;
+	--tab-block-margin: 8px !important;
+}
+/* TABS: height */
+#tabbrowser-tabs,
+#tabbrowser-tabs > #tabbrowser-arrowscrollbox,
+.tabbrowser-tabs .tabbrowser-tab {
+	height: 18px !important;
+	min-height: 18px !important;
+}
+
+.tabbrowser-tab {
+	height: 18px !important;
+	min-height: 18px !important;
+	padding: 0px 0px 0px 0px !important;
+}
+
+/* TABS: remove box shadow for stying purpose */
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+#tabbrowser-tabs:not([noshadowfortests])
+	.tab-background:is([selected], [multiselected]) {
+	box-shadow: none !important;
+}
+
+/* New Tab Button Parent: specify height and padding*/
+#tabbrowser-arrowscrollbox-periphery {
+	height: 20px !important;
+	min-height: 20px !important;
+	padding-bottom: 2px !important;
+	padding-top: 3px !important;
+	border-radius: 6px;
+	border-width: 1px;
+}
+
+/* Specify block margins and padding for the toolbar*/
+#TabsToolbar {
+	margin-top: -1px !important;
+	margin-bottom: 5px !important;
+	--tab-block-margin: 0px !important;
+	--toolbarbutton-inner-padding: 8px !important;
+}
+
+/* Override vertical shifts when moving a tab */
+#TabsToolbar[movingtab] {
+	padding-bottom: 0px !important;
+}
+#TabsToolbar[movingtab] > .tabbrowser-tabs {
+	padding-bottom: 0px !important;
+	margin-bottom: 5px !important;
+}
+#TabsToolbar[movingtab] + #nav-bar {
+	margin-top: 0px !important;
+}
+
+/* Specify the rounded borders for tabs */
+.tab-background {
+	border-radius: 6px 6px 0px 0px !important;
+}
+
+/* New Tab Button Icon: Change Image and size, adjust padding / margins. Work could be done here to make it look better. */
+#tabs-newtab-button.toolbarbutton-1 .toolbarbutton-icon {
+	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAAYUlEQVRoge3XsQ2AMAwAQcL+O4capJThhbgbwNYrjXMcAKWxa/Ccc94WjbFl17lj6JsE1ATUBNQE1ATUBNQE1JY3+vOer63+E59/AQE1f+KagJqAmoCagJqAmoCaAIB/uwBJeQxGJRr+vQAAAABJRU5ErkJggg==') !important;
+	opacity: 1 !important;
+	border-radius: 0 !important;
+	width: 30px !important;
+	margin-left: 0px !important;
+	margin-top: 0px !important;
+	padding: 6px !important;
+}
+
+/* New Tab Button: sepcify the height and border radius */
+#tabs-newtab-button {
+	height: 20px !important;
+	border-radius: 6px !important;
+}
+
+#main-window:not([customizing])
+	#navigator-toolbox:not(:focus-within):not(:hover) {
+	margin-top: -105px; /**/
+}
+
+/* Specify the height of the entire title bar */
+#titlebar {
+	height: 25px !important;
+}
+
+/* Removes black shadow line under tabs */
+#nav-bar {
+	--tabs-navbar-shadow-size: 0px !important;
+}
+
+/* Close Tab Buttons: Hides them when not active tab, when the tab is hovered, the close button is shown */
+/* 		- Replicating the chromium-based feature */
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
+	visibility: hidden !important;
+	margin-left: -16px !important;
+}
+
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+	visibility: visible !important;
+	display: -moz-inline-box !important;
+	fill: #ffffff !important;
+}
+
+.tab-close-button:hover {
+	fill: #ffffff !important;
+	color: #eaf3ff !important;
+}
+
+#tabbrowser-tabs {
+	margin-left: 4px !important;
+}
+
+.titlebar-spacer[type='pre-tabs'],
+.titlebar-spacer[type='post-tabs'] {
+	width: 0px !important;
+}
