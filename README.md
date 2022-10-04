@@ -1,6 +1,6 @@
 # Firefox-CSS
 
-### This is my custom CSS to attempt to recreate the chromium experience.
+### This is my custom CSS to recreate the chromium experience.
 #### *Note: this has only been tested on Windows 11 and on 1920x1080 screen resolution.
 
 __Instructions:__
