@@ -22,6 +22,10 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 	min-height: 18px !important;
 }
 
+#tabbrowser-tabs {
+	padding-right: 25px !important;
+}
+
 .tabbrowser-tab {
 	height: 18px !important;
 	min-height: 18px !important;
