@@ -11,15 +11,15 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 	/* fix for full screen mode */
 	--tab-toolbar-navbar-overlap: 0px !important;
 	/* set minimum tab height  */
-	--tab-min-height: 15px !important;
+	--tab-min-height: 33px !important;
 	--tab-block-margin: 8px !important;
 }
 /* TABS: height */
 #tabbrowser-tabs,
 #tabbrowser-tabs > #tabbrowser-arrowscrollbox,
 .tabbrowser-tabs .tabbrowser-tab {
-	height: 18px !important;
-	min-height: 18px !important;
+	height: 33px !important;
+	min-height: 33px !important;
 }
 
 #tabbrowser-tabs {
@@ -27,8 +27,9 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 }
 
 .tabbrowser-tab {
-	height: 18px !important;
-	min-height: 18px !important;
+	height: 33px !important;
+	min-height: 33px !important;
+	margin-top: 2px !important;
 	padding: 0px 0px 0px 0px !important;
 }
 
@@ -41,18 +42,25 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 
 /* New Tab Button Parent: specify height and padding*/
 #tabbrowser-arrowscrollbox-periphery {
-	height: 20px !important;
-	min-height: 20px !important;
-	padding-bottom: 1px !important;
-	padding-top: 1px !important;
+	height: 34px !important;
+	min-height: 34px !important;
+	padding-bottom: 2px !important;
+	padding-top: 0px !important;
 	border-radius: 6px;
 	border-width: 1px;
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+}
+
+.tabs-newtab-button {
+	width: 32px !important;
+	padding: 2px !important;
 }
 
 /* Specify block margins and padding for the toolbar*/
 #TabsToolbar {
 	margin-top: -1px !important;
-	margin-bottom: 5px !important;
+	/* margin-bottom: 5px !important; */
 	--tab-block-margin: 0px !important;
 	--toolbarbutton-inner-padding: 8px !important;
 }
@@ -74,6 +82,10 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 	border-radius: 6px 6px 0px 0px !important;
 }
 
+#TabsToolbar .toolbarbutton-1 {
+	margin: 0px !important;
+}
+
 /* New Tab Button Icon: Change Image and size, adjust padding / margins. Work could be done here to make it look better. */
 #tabs-newtab-button.toolbarbutton-1 .toolbarbutton-icon {
 	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAAYUlEQVRoge3XsQ2AMAwAQcL+O4capJThhbgbwNYrjXMcAKWxa/Ccc94WjbFl17lj6JsE1ATUBNQE1ATUBNQE1JY3+vOer63+E59/AQE1f+KagJqAmoCagJqAmoCaAIB/uwBJeQxGJRr+vQAAAABJRU5ErkJggg==') !important;
@@ -83,11 +95,14 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 	margin-left: 0px !important;
 	margin-top: 0px !important;
 	padding: 6px !important;
+	height: 32px !important;
+	min-height: 32px !important;
 }
 
 /* New Tab Button: sepcify the height and border radius */
 #tabs-newtab-button {
-	height: 20px !important;
+	/* height: 32px !important; */
+	/* min-height: 32px !important; */
 	border-radius: 6px !important;
 }
 
@@ -117,6 +132,18 @@ https://addons.mozilla.org/en-US/firefox/addon/dark-chromium-esque-theme/
 	display: -moz-inline-box !important;
 	fill: #ffffff !important;
 }
+
+.tab-content {
+	margin-bottom: 2px !important;
+}
+
+/* #firefox-view-button {
+	margin-top: 12px !important;
+}
+
+#alltabs-button {
+	margin-top: 12px !important;
+} */
 
 .tab-close-button:hover {
 	fill: #ffffff !important;
